@@ -1,3 +1,5 @@
+require 'pry'
+
 CREATE TABLE projects (
   id INTEGER PRIMARY KEY,
   title TEXT,
@@ -19,3 +21,5 @@ CREATE TABLE pledges (
   user_id INTEGER,
   project_id INTEGER
 );
+
+binding.pry

@@ -50,6 +50,6 @@ def selects_the_category_name_and_the_sum_total_of_the_all_its_pledges_for_the_b
 SELECT * FROM projects 
 INNER JOIN pledges on projects.id = pledges.project_id 
 WHERE category = 'books'
-GROUP BY 
+GROUP BY projects.title 
 
 end

@@ -23,11 +23,11 @@ end
 
 def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal
 
-  SELECT projects.title, projects.funding_goal, SUM(pledges.amount) AS "Total Pledged" from projects 
+  "SELECT projects.title, projects.funding_goal, SUM(pledges.amount) AS "Total Pledged" from projects 
   INNER JOIN pledges ON pledges.project_id = projects.id 
   GROUP BY projects.title
   HAVING SUM(pledges.amount) > projects.funding_goal
-  ORDER BY projects.title
+  ORDER BY projects.title"
   
 
 end
